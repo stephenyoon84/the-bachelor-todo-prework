@@ -1,4 +1,4 @@
-describe "bachelor" do 
+describe "bachelor" do
 
   let(:data) { JSON.parse(File.read('spec/fixtures/contestants.json')) }
 
@@ -31,15 +31,15 @@ describe "bachelor" do
   end
 
   describe "#count_contestants_by_hometown" do
-    it "returns 2 when passed data and the string 'New York, New York'" do
+    it "returns 4 when passed data and the string 'New York, New York'" do
       expect(count_contestants_by_hometown(data, "New York, New York")).to eq(4)
     end
 
-    it "returns 6 when passed data and the string 'Chicago, Illinois'" do
+    it "returns 8 when passed data and the string 'Chicago, Illinois'" do
       expect(count_contestants_by_hometown(data, "Chicago, Illinois")).to eq(8)
     end
 
-    it "returns 6 when passed data and the string 'San Diego, CA'" do
+    it "returns 5 when passed data and the string 'San Diego, CA'" do
       expect(count_contestants_by_hometown(data, "San Diego, California")).to eq(5)
     end
   end
@@ -71,4 +71,3 @@ describe "bachelor" do
   end
 
 end
-
